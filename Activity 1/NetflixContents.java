@@ -14,6 +14,9 @@ public interface NetflixContents {
         movies.add(new Movie("Glass Onion", "Mystery", 141));
         movies.add(new Movie("Unlocked", "Mystery", 117));
         movies.add(new Movie("Despicable Me 2", "Comedy", 97));
+        movies.add(new Movie("To All The Boys I've Loved Before", "Romance", 100));
+
+
 
         System.out.print("\nEnter your name: ");
           Profiles user = new Profiles(sc.nextLine());
@@ -24,7 +27,7 @@ public interface NetflixContents {
                   System.out.println((i + 1) + ". " + movies.get(i).title + " (" + movies.get(i).genre + ")");
               }
               
-              System.out.print("Enter the movie number to watch (0 to exit): ");
+              System.out.print("Enter the movie number to watch \n(0 to view recommendations): ");
               int choice = sc.nextInt();
               if (choice == 0) break;
               
@@ -34,10 +37,9 @@ public interface NetflixContents {
                   System.out.println("Invalid choice!");
               }
           }
-          
-          // Recommend a movie based on most-watched genre
+
           String favGenre = user.getFavoriteGenre();
-          System.out.println("\nBased on your watch history, we recommend:");
+          System.out.println("\nBased on your watch history, \nhere's a list of movies you should watch next: ");
           movies.stream().filter(m -> m.genre.equals(favGenre)).findFirst().ifPresent(m ->
                   System.out.println(m.title + " (" + m.genre + ")"));
     }
