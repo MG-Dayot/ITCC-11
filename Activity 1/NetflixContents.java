@@ -13,6 +13,7 @@ public interface NetflixContents {
         movies.add(new Movie("The Garfield Movie", "Comedy", 90));
         movies.add(new Movie("Glass Onion", "Mystery", 141));
         movies.add(new Movie("Unlocked", "Mystery", 117));
+        movies.add(new Movie("Despicable Me 2", "Comedy", 97));
 
         System.out.print("\nEnter your name: ");
           Profiles user = new Profiles(sc.nextLine());
