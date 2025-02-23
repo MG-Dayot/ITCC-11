@@ -38,7 +38,7 @@ public class RecursiveFileSearch {
                 writer.println(filePath);
             });
 
-            System.out.println("\nSearching...");
+            System.out.println("Searching...");
             search.search(root, extension, " ");
             System.out.println("\nSearch completed. Results saved to searchResults.txt");
         } catch (IOException e) {
