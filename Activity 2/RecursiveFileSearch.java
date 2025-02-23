@@ -5,7 +5,7 @@ public class RecursiveFileSearch {
         System.out.println("Enter directory path: ");
         String path = input.nextLine();
 
-        System.out.println("Enter file extension to search: ")
+        System.out.println("Enter file extension to search: ");
         String extension = input.nextLine();
 
         FileSystemNode root = new FileSystemNode(directory, true);
