@@ -1,4 +1,4 @@
-public class RecursiveSearch {
+public class RecursiveFileSearch {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -31,11 +31,11 @@ public class RecursiveSearch {
             search.setFileFoundListener(filePath -> {
                 System.out.println("File found: " + filePath);
                 writer.println(filePath);
-            })
+            });
 
             System.out.println("\nSearching...");
             search.search(root, extension, " ");
-            System.out.println("\nSearch completed. Results saved to searchResults.txt")
+            System.out.println("\nSearch completed. Results saved to searchResults.txt");
         } catch (IOException e) {
             System.err.println("Error writing to file: " + e.getMessage());
         }
