@@ -1,1 +1,2 @@
- docs/Readings.pdf
+ documents/Miscellaneous/receipt.txt
+ documents/Miscellaneous/code snippet.txt
