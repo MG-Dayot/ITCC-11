@@ -15,7 +15,7 @@ public class SearchFile {
             }
         } else if (node.isDirectroy) {
             for (FileSystemNode child : node.children) {
-                search(child, extension, path + node.name + "/")
+                search(child, extension, path + node.name + "/");
             }
         }
     }

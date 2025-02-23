@@ -1,7 +1,8 @@
 {
     "java.project.sourcePaths": [
         "src",
-        "Activity 1"
+        "Activity 1",
+        "Activity 2"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [

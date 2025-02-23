@@ -6,7 +6,7 @@ public class FileSystemNode {
     boolean isDirectroy;
     List<FileSystemNode> children;
 
-    File(String name, boolean isDirectroy) {
+    FileSystemNode(String name, boolean isDirectroy) {
         this.name = name;
         this.isDirectroy = isDirectroy;
         this.children = new ArrayList<>();

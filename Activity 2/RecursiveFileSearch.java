@@ -1,3 +1,8 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
 public class RecursiveFileSearch {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -8,7 +13,7 @@ public class RecursiveFileSearch {
         System.out.println("Enter file extension to search: ");
         String extension = input.nextLine();
 
-        FileSystemNode root = new FileSystemNode(directory, true);
+        FileSystemNode root = new FileSystemNode(path, true);
         FileSystemNode file1 = new FileSystemNode("Activity1.java", false);
         FileSystemNode file2 = new FileSystemNode("Activity2.java", false);
         FileSystemNode subFolder1 = new FileSystemNode("Activities", true);
@@ -28,7 +33,7 @@ public class RecursiveFileSearch {
         SearchFile search = new SearchFile();
 
         try(PrintWriter writer = new PrintWriter(new FileWriter("searchResults.txt"))) {
-            search.setFileFoundListener(filePath -> {
+            search.FileFoundListener(filePath -> {
                 System.out.println("File found: " + filePath);
                 writer.println(filePath);
             });
